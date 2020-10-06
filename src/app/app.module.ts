@@ -13,23 +13,30 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app.routing';
+import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
+const MaterialModules = [
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatFormFieldModule,
+  MatIconModule,
+  MatListModule,
+  MatCardModule,
+  MatSelectModule,
+  MatSlideToggleModule,
+];
+
 @NgModule({
-  declarations: [AppComponent, NavigationComponent],
+  declarations: [AppComponent, NavigationComponent, HomeComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatListModule,
-    MatCardModule,
-    MatSelectModule,
-    MatSlideToggleModule,
+    AppRoutingModule,
+    ...MaterialModules,
   ],
   providers: [],
   bootstrap: [AppComponent],
