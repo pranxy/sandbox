@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "deploy": "ng build --prod --base-href=/sandbox.main/",
-    "lint": "ng lint",
+    "deploy": "ng build --prod --base-href=/sandbox/",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
