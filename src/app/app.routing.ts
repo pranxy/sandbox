@@ -1,18 +1,7 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
-import { HomeComponent } from './home/home.component';
+import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: HomeComponent,
-  },
+    { path: 'css', loadChildren: () => import('./css/css.module').then((m) => m.CssModule) }
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-  declarations: [],
-})
-export class AppRoutingModule {}
+export const AppRoutingModule = RouterModule.forChild(routes);

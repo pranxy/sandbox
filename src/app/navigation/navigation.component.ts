@@ -5,27 +5,25 @@ import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-navigation',
-  templateUrl: './navigation.component.html',
-  styleUrls: ['./navigation.component.scss'],
+    selector: 'app-navigation',
+    templateUrl: './navigation.component.html',
+    styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  @Input()
-  isDarkMode = false;
+    @Input()
+    isDarkMode = false;
 
-  @Output()
-  readonly darkModeSwitched = new EventEmitter<boolean>();
+    @Output()
+    readonly darkModeSwitched = new EventEmitter<boolean>();
 
-  isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.Handset)
-    .pipe(
-      map((result) => result.matches),
-      shareReplay()
+    isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
+        map((result) => result.matches),
+        shareReplay()
     );
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+    constructor(private breakpointObserver: BreakpointObserver) {}
 
-  onDarkModeSwitched({ checked }: MatSlideToggleChange): void {
-    this.darkModeSwitched.emit(checked);
-  }
+    onDarkModeSwitched({ checked }: MatSlideToggleChange): void {
+        this.darkModeSwitched.emit(checked);
+    }
 }
