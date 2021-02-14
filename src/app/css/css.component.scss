@@ -1,0 +1,14 @@
+:host {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-gap: 5px;
+    height: 100%;
+}
+
+aside {
+    border-right: 1px solid lightgray;
+}
+
+section {
+    padding: 0.8rem;
+}

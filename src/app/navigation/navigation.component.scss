@@ -16,6 +16,14 @@
     z-index: 1;
 }
 
-.content {
-    padding: 2rem;
+.mat-drawer-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 auto;
 }

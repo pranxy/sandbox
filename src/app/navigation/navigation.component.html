@@ -1,5 +1,5 @@
 <mat-sidenav-container class="sidenav-container">
-    <mat-sidenav
+    <!-- <mat-sidenav
         #drawer
         class="sidenav"
         fixedInViewport
@@ -12,7 +12,7 @@
             <a mat-list-item routerLink="/css">CSS</a>
             <a mat-list-item routerLink="/wiki">WIKI</a>
         </mat-nav-list>
-    </mat-sidenav>
+    </mat-sidenav> -->
     <mat-sidenav-content>
         <mat-toolbar color="primary">
             <button
@@ -24,6 +24,11 @@
             >
                 <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
             </button>
+            <div>
+                <button mat-button routerLink="/css" routerLinkActive="active">CSS</button>
+                <button mat-button routerLink="/wiki" routerLinkActive="active">Wiki</button>
+            </div>
+            <span style="flex: 1 1 auto;"></span>
             <span>
                 <mat-slide-toggle [checked]="isDarkMode" (change)="onDarkModeSwitched($event)"
                     >Dark Mode</mat-slide-toggle
