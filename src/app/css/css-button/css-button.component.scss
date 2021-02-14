@@ -64,35 +64,32 @@
         }
 
         &:nth-child(1) {
-            &::before, &::after {
+            &::before,
+            &::after {
                 $color-red: #ff1f71;
                 background: $color-red;
-                box-shadow: 0 0 5px $color-red,
-                0 0 15px $color-red,
-                0 0 30px $color-red,
-                0 0 60px $color-red;
+                box-shadow: 0 0 5px $color-red, 0 0 15px $color-red, 0 0 30px $color-red,
+                    0 0 60px $color-red;
             }
         }
 
         &:nth-child(2) {
-            &::before, &::after {
+            &::before,
+            &::after {
                 $color-blue: #2bd2ff;
                 background: $color-blue;
-                box-shadow: 0 0 5px $color-blue,
-                0 0 15px $color-blue,
-                0 0 30px $color-blue,
-                0 0 60px $color-blue;
+                box-shadow: 0 0 5px $color-blue, 0 0 15px $color-blue, 0 0 30px $color-blue,
+                    0 0 60px $color-blue;
             }
         }
 
         &:nth-child(3) {
-            &::before, &::after {
+            &::before,
+            &::after {
                 $color-green: #1eff45;
                 background: $color-green;
-                box-shadow: 0 0 5px $color-green,
-                0 0 15px $color-green,
-                0 0 30px $color-green,
-                0 0 60px $color-green;
+                box-shadow: 0 0 5px $color-green, 0 0 15px $color-green, 0 0 30px $color-green,
+                    0 0 60px $color-green;
             }
         }
 
