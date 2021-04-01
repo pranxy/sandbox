@@ -18,27 +18,27 @@ import { HomeComponent } from './home/home.component';
 import { NavigationComponent } from './navigation/navigation.component';
 
 const MaterialModules = [
-  MatToolbarModule,
-  MatButtonModule,
-  MatSidenavModule,
-  MatFormFieldModule,
-  MatIconModule,
-  MatListModule,
-  MatCardModule,
-  MatSelectModule,
-  MatSlideToggleModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule,
+    MatSelectModule,
+    MatSlideToggleModule
 ];
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, HomeComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    LayoutModule,
-    AppRoutingModule,
-    ...MaterialModules,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent, NavigationComponent, HomeComponent],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        LayoutModule,
+        AppRoutingModule,
+        ...MaterialModules
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {}
