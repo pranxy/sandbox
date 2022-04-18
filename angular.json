@@ -111,12 +111,43 @@
           }
         }
       }
+    },
+    "glassmorphism": {
+      "projectType": "library",
+      "root": "projects/glassmorphism",
+      "sourceRoot": "projects/glassmorphism/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/glassmorphism/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/glassmorphism/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/glassmorphism/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/glassmorphism/src/test.ts",
+            "tsConfig": "projects/glassmorphism/tsconfig.spec.json",
+            "karmaConfig": "projects/glassmorphism/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "sandbox",
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "scss"
+      "style": "scss"
     }
   }
 }
